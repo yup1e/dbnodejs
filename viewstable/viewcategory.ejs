@@ -1,0 +1,32 @@
+<html>
+    <head>
+        
+        <title><%=(page_title) ? page_title :''%></title>
+    
+    </head>
+    <body>
+    
+
+<div class="page-data">
+    <div class="data-table">
+    <table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th width="50px">No</th>
+            <th>Name</th>
+        </tr>                               
+        <% if(data.length){ 
+                        
+         for(var i = 0;i < data.length;i++) { %>                 
+        <tr>
+            <td><%=(i+1)%></td>
+            <td><%=data[i].name%></td>
+        </tr>
+
+    	<% }} %>
+                                                     
+    </table>
+    </div>
+</div>        
+
+</body>
+</html>
