@@ -1,11 +1,10 @@
 <html>
     <head>
         
-        <title><%=(page_title) ? page_title :''%></title>
+        <title><%=(page_title) ? page_title+customvar :''%></title>
     
     </head>
-    <body>
-    
+<body>
 
 <div class="page-data">
     <div class="data-table">
@@ -13,6 +12,7 @@
         <tr>
             <th width="50px">No</th>
             <th>Name</th>
+		<th>Action</th>
         </tr>                               
         <% if(data.length){ 
                         
@@ -20,6 +20,10 @@
         <tr>
             <td><%=(i+1)%></td>
             <td><%=data[i].name%></td>
+		<td>
+		<a href="/edit/<%=data[i].category_id%>" name="edit">Edit</a>
+		<a href="/delete/<%=data[i].category_id%>" name="delete">Delete</a>
+		</td>
         </tr>
 
     	<% }} %>

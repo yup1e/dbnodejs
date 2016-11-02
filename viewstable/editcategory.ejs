@@ -1,0 +1,23 @@
+<html>
+    <head>
+        
+        <title><%=(page_title) ? page_title :''%></title>
+    
+    </head>
+    <body>
+    
+
+<form method="post" action="/save_edit/<%=data[0].category_id%>">
+    <table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <td>Category</td>
+            <td><input type="text" name="category" value="<%=data[0].name%>"></td>
+		<td>
+		<input type="submit" name="save" value="Save Category">
+		</td>
+        </tr>
+    </table>
+</form>        
+
+</body>
+</html>
